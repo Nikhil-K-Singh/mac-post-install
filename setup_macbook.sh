@@ -1,4 +1,4 @@
-brew install pipx rust eza tree bat thefuck entr tldr vlc motrix
+brew install pipx rust eza tree bat thefuck entr tldr vlc ffmpeg motrix
 brew install --cask visual-studio-code
 
 pipx install quickdownload
