@@ -1,5 +1,8 @@
 alias qd="quickdownload"
 alias eza="eza --color=always --long  --git --icons=always --no-user --no-permissions --tree --level=2"
+alias ytd=yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'
+
+
 
 # =================  FZF  ========================
 # setting up fzf key bindings and fuzzy completions
