@@ -1,6 +1,10 @@
-alias qd="quickdownload"
+# ALIASING
 alias eza="eza --color=always --long  --git --icons=always --no-user --no-permissions --tree --level=2"
-alias ytd=yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'
+alias ytd="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
+alias fp="~/FilePilot/target/release/filepilot"
+alias qd="quickdownload"
+alias up="cd .."
+
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -29,7 +33,16 @@ _fzf_comprun() {
 eval $(thefuck --alias)
 eval $(thefuck --alias q)
 
-alias fp="~/FilePilot/target/release/filepilot"
+# prompt configuration
+
+autoload -Uz vcs_info
+precmd() { vcs_info }
+
+zstyle ':vcs_info:git:*' formats '%b '
+
+setopt PROMPT_SUBST
+PROMPT='%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
+
 
 # Created by `pipx` on 2025-08-09 16:31:34
 export PATH="$PATH:/Users/nikhilsingh/.local/bin"
