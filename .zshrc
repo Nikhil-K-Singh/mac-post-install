@@ -2,7 +2,8 @@ alias qd="quickdownload"
 alias eza="eza --color=always --long  --git --icons=always --no-user --no-permissions --tree --level=2"
 alias ytd=yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'
 
-
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # =================  FZF  ========================
 # setting up fzf key bindings and fuzzy completions
@@ -28,7 +29,7 @@ _fzf_comprun() {
 eval $(thefuck --alias)
 eval $(thefuck --alias q)
 
-alias fp="~/FilePilot/target/debug/filepilot"
+alias fp="~/FilePilot/target/release/filepilot"
 
 # Created by `pipx` on 2025-08-09 16:31:34
 export PATH="$PATH:/Users/nikhilsingh/.local/bin"
