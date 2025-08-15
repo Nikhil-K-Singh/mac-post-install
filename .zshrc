@@ -2,8 +2,10 @@
 alias eza="eza --color=always --long  --git --icons=always --no-user --no-permissions --tree --level=2"
 alias ytd="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
 alias fp="~/FilePilot/target/release/filepilot"
+alias myip="curl http://ipecho.net/plain; echo"
 alias qd="quickdownload"
-alias up="cd .."
+alias up="fc -ln -1 | awk '{\$1=\"\"; sub(/^ /, \"\"); print}' | pbcopy"
+
 
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -27,6 +29,14 @@ _fzf_comprun() {
   esac
 }
 
+ytdf() {
+  local file="${1:-links.txt}"
+  while IFS= read -r line; do
+    yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best' "$line"
+  done < "$file"
+}
+
+
 
 
 # thefuck is to autocorrect your previously typed command
@@ -35,13 +45,21 @@ eval $(thefuck --alias q)
 
 # prompt configuration
 
-autoload -Uz vcs_info
-precmd() { vcs_info }
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+fpath+=($HOME/.zsh/pure)
+autoload -U promptinit; promptinit
+prompt pure
+zmodload zsh/nearcolor
+zstyle :prompt:pure:path color '#19b002'
 
-zstyle ':vcs_info:git:*' formats '%b '
+# change the color for both `prompt:success` and `prompt:error`
+zstyle ':prompt:pure:prompt:success' color blue
+zstyle ':prompt:pure:prompt:error' color red
 
-setopt PROMPT_SUBST
-PROMPT='%F{green}%*%f %F{blue}%~%f %F{red}${vcs_info_msg_0_}%f$ '
+# turn on git stash status
+zstyle :prompt:pure:git:stash show yes
+
+prompt pure
 
 
 # Created by `pipx` on 2025-08-09 16:31:34

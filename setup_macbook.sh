@@ -1,4 +1,4 @@
-brew install pipx rust eza tree bat thefuck entr tldr vlc ffmpeg motrix
+brew install pipx rust eza tree bat thefuck entr tldr vlc ffmpeg motrix ripgrep zsh pure
 brew install --cask visual-studio-code
 brew install zsh-autosuggestions zsh-syntax-highlighting
 
