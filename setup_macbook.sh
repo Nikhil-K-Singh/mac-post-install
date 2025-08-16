@@ -16,18 +16,11 @@ cd FilePilot
 cargo build --release
 cd ..
 
+#DOCKER: 2 APPROACHES
+# if DOCKER installation fails to pull packages check the DNS on your wifi connection from your system settings,
+# set DNS to 8.8.8.8 and 1.1.1.1
+brew install --cask docker
 
-# qd https://desktop.docker.com/mac/main/arm64/Docker.dmg
-
-# sudo hdiutil attach ./Docker.dmg
-# sudo cp -R /Volumes/Docker /Applications
-# sudo hdiutil unmount /Volumes/Docker
-# this will install docker with the GUI but the daemon etc will run as expected
-
-# qd https://central.github.com/deployments/desktop/desktop/latest/darwin-arm64 -o "GithubDesktop.zip"
-
-#unzip GithubDesktop.zip
-#mv GitHub\ Desktop.app /Applications
-
-# brew install --cask docker
-# brew install docker-compose
+#GITHUB DESKTOP
+qd https://central.github.com/deployments/desktop/desktop/latest/darwin-arm64 -o "GithubDesktop.zip"
+open GithubDesktop.zip
