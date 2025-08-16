@@ -69,5 +69,3 @@ zstyle ':prompt:pure:prompt:error' color red
 zstyle :prompt:pure:git:stash show yes
 
 prompt pure
-
-export PATH="$PATH:/Users/nikhilsingh/.local/bin"
