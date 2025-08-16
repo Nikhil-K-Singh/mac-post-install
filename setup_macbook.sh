@@ -4,6 +4,7 @@
 export PATH=/opt/homebrew/bin:$PATH 
 brew install pipx rust eza tree bat thefuck entr tldr vlc ffmpeg motrix ripgrep zsh pure fzf
 brew install zsh-autosuggestions zsh-syntax-highlighting
+python3 -m pipx ensurepath
 
 brew install --cask visual-studio-code firefox
 
