@@ -1,12 +1,20 @@
-# ALIASING
+
+# =================  Aliases  ========================
+
+alias ll="ls -la"
+alias ..="cd .."
+alias home="cd ~"
+alias Home="cd ~"
+alias docs="cd ~/Documents"
+alias downloads="cd ~/Downloads"
+alias github="cd ~/Documents/GitHub"
+
 alias eza="eza --color=always --long  --git --icons=always --no-user --no-permissions --tree --level=2"
 alias ytd="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
 alias fp="~/FilePilot/target/release/filepilot"
 alias myip="curl http://ipecho.net/plain; echo"
 alias qd="quickdownload"
 alias up="fc -ln -1 | awk '{\$1=\"\"; sub(/^ /, \"\"); print}' | pbcopy"
-
-
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -61,6 +69,11 @@ zstyle :prompt:pure:git:stash show yes
 
 prompt pure
 
+source ~/setup_macbook.sh
 
+# =================  Aliases  ========================
+
+alias ll="ls -la"
+alias ..="cd .."
 # Created by `pipx` on 2025-08-09 16:31:34
 export PATH="$PATH:/Users/nikhilsingh/.local/bin"
