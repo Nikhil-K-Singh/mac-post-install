@@ -1,4 +1,5 @@
 
+source ~/setup_macbook.sh
 # =================  Aliases  ========================
 
 alias ll="ls -la"
@@ -69,8 +70,4 @@ zstyle :prompt:pure:git:stash show yes
 
 prompt pure
 
-source ~/setup_macbook.sh
-
-
-# Created by `pipx` on 2025-08-09 16:31:34
 export PATH="$PATH:/Users/nikhilsingh/.local/bin"
