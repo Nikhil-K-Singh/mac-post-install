@@ -71,9 +71,6 @@ prompt pure
 
 source ~/setup_macbook.sh
 
-# =================  Aliases  ========================
 
-alias ll="ls -la"
-alias ..="cd .."
 # Created by `pipx` on 2025-08-09 16:31:34
 export PATH="$PATH:/Users/nikhilsingh/.local/bin"
