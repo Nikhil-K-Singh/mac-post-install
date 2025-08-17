@@ -45,9 +45,6 @@ ytdf() {
   done < "$file"
 }
 
-
-
-
 # thefuck is to autocorrect your previously typed command
 eval $(thefuck --alias)
 eval $(thefuck --alias q)
@@ -69,3 +66,4 @@ zstyle ':prompt:pure:prompt:error' color red
 zstyle :prompt:pure:git:stash show yes
 
 prompt pure
+# =================  End of Aliases  ========================
