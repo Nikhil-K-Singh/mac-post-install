@@ -5,7 +5,7 @@
 export PATH=/opt/homebrew/bin:$PATH
 
 # Install command-line tools
-brew install pipx rust eza tree bat thefuck entr tldr vlc ffmpeg motrix ripgrep zsh pure fzf
+brew install pipx rust eza tree bat thefuck entr tldr vlc ffmpeg motrix ripgrep zsh pure fzf libtorrent-rasterbar
 brew install zsh-autosuggestions zsh-syntax-highlighting
 
 export PATH="$HOME/.local/bin:$PATH"
