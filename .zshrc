@@ -66,4 +66,5 @@ zstyle ':prompt:pure:prompt:error' color red
 zstyle :prompt:pure:git:stash show yes
 
 prompt pure
+sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'
 # =================  End of Aliases  ========================
