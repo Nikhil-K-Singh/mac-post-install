@@ -21,9 +21,14 @@ brew install --cask visual-studio-code firefox
 cargo install --locked zellij
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# Build FilePilot
-git clone https://github.com/Nikhil-K-Singh/FilePilot.git
-cd FilePilot
+# update FilePilot if already installed
+if [ -d "FilePilot" ]; then
+  cd FilePilot
+  git pull
+else
+  git clone https://github.com/Nikhil-K-Singh/FilePilot.git
+  cd FilePilot
+fi
 cargo build --release
 cd ..
 
@@ -32,6 +37,10 @@ cd ..
 # set DNS to 8.8.8.8 and 1.1.1.1
 brew install --cask docker
 
+quickdownload "https://shottr.cc/dl/Shottr-1.8.1.dmg" -o "Shottr.dmg" -p 8
+open "Shottr.dmg"
 #GITHUB DESKTOP
-quickdownload https://central.github.com/deployments/desktop/desktop/latest/darwin-arm64 -o "GithubDesktop.zip"
-open GithubDesktop.zip
+quickdownload "https://central.github.com/deployments/desktop/desktop/latest/darwin-arm64" -o "GithubDesktop.zip" -p 8
+open "GithubDesktop.zip"
+mv "GitHub Desktop.app" /Applications/
+rm "GithubDesktop.zip"
