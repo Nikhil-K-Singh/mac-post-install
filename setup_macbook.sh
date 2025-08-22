@@ -42,5 +42,4 @@ open "Shottr.dmg"
 #GITHUB DESKTOP
 quickdownload "https://central.github.com/deployments/desktop/desktop/latest/darwin-arm64" -o "GithubDesktop.zip" -p 8
 open "GithubDesktop.zip"
-mv "GitHub Desktop.app" /Applications/
 rm "GithubDesktop.zip"
