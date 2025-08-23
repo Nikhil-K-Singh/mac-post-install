@@ -67,4 +67,5 @@ zstyle :prompt:pure:git:stash show yes
 
 prompt pure
 sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'
+export PATH="$HOME/.local/bin:$PATH"
 # =================  End of Aliases  ========================
