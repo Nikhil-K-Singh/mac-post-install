@@ -1,5 +1,3 @@
-
-source ~/setup_macbook.sh
 # =================  Aliases  ========================
 
 alias ll="ls -la"
@@ -16,6 +14,7 @@ alias fp="~/FilePilot/target/release/filepilot"
 alias myip="curl http://ipecho.net/plain; echo"
 alias qd="quickdownload"
 alias up="fc -ln -1 | awk '{\$1=\"\"; sub(/^ /, \"\"); print}' | pbcopy"
+
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -67,5 +66,9 @@ zstyle :prompt:pure:git:stash show yes
 
 prompt pure
 sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'
+
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH=/opt/homebrew/bin:$PATH
 export PATH="$HOME/.local/bin:$PATH"
+
 # =================  End of Aliases  ========================
