@@ -39,8 +39,9 @@ brew install --cask docker
 
 # Desktop Applications
 quickdownload "https://shottr.cc/dl/Shottr-1.8.1.dmg" -o "Shottr.dmg" -p 8
-quickdownload "https://github.com/jgraph/drawio-desktop/releases/download/v28.0.6/draw.io-universal-28.0.6.dmg" -o "drawio.dmg"-p 8
+quickdownload "https://github.com/jgraph/drawio-desktop/releases/download/v28.0.6/draw.io-universal-28.0.6.dmg" -o "drawio.dmg" -p 8
 quickdownload "https://central.github.com/deployments/desktop/desktop/latest/darwin-arm64" -o "GithubDesktop.zip" -p 8
 open "Shottr.dmg"
 open  "drawio.dmg"
 open "GithubDesktop.zip"
+exit
