@@ -22,6 +22,7 @@ cargo install --locked zellij
 export PATH="$HOME/.cargo/bin:$PATH"
 
 # update FilePilot if already installed
+cd ~
 if [ -d "FilePilot" ]; then
   cd FilePilot
   git pull
