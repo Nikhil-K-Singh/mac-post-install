@@ -38,6 +38,21 @@ cd ..
 # set DNS to 8.8.8.8 and 1.1.1.1
 brew install --cask docker
 
+brew install firefoxpwa
+firefoxpwa runtime install
+firefoxpwa site install \
+  --document-url "https://mail.google.com/mail/u/0/" \
+  "https://mail.google.com/mail/u/0/manifest.json"
+
+firefoxpwa site install \
+  --document-url "https://calendar.google.com/calendar/u/0/r" \
+  "https://calendar.google.com/calendar/u/0/manifest.json"
+
+firefoxpwa site install \
+  --document-url "https://web.whatsapp.com/" \
+  "https://web.whatsapp.com/data/manifest.json" 
+
+
 # Desktop Applications
 quickdownload "https://shottr.cc/dl/Shottr-1.8.1.dmg" -o "Shottr.dmg" -p 8
 quickdownload "https://github.com/jgraph/drawio-desktop/releases/download/v28.0.6/draw.io-universal-28.0.6.dmg" -o "drawio.dmg" -p 8
