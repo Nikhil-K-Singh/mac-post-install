@@ -38,19 +38,19 @@ cd ..
 # set DNS to 8.8.8.8 and 1.1.1.1
 brew install --cask docker
 
-brew install firefoxpwa
-firefoxpwa runtime install
-firefoxpwa site install \
-  --document-url "https://mail.google.com/mail/u/0/" \
-  "https://mail.google.com/mail/u/0/manifest.json"
+# brew install firefoxpwa
+# firefoxpwa runtime install
+# firefoxpwa site install \
+#   --document-url "https://mail.google.com/mail/u/0/" \
+#   "https://mail.google.com/mail/u/0/manifest.json"
 
-firefoxpwa site install \
-  --document-url "https://calendar.google.com/calendar/u/0/r" \
-  "https://calendar.google.com/calendar/u/0/manifest.json"
+# firefoxpwa site install \
+#   --document-url "https://calendar.google.com/calendar/u/0/r" \
+#   "https://calendar.google.com/calendar/u/0/manifest.json"
 
-firefoxpwa site install \
-  --document-url "https://web.whatsapp.com/" \
-  "https://web.whatsapp.com/data/manifest.json" 
+# firefoxpwa site install \
+#   --document-url "https://web.whatsapp.com/" \
+#   "https://web.whatsapp.com/data/manifest.json" 
 
 
 # Desktop Applications
