@@ -1,5 +1,7 @@
 #!/usr/bin/zsh
 
+
+sudo networksetup -setdnsservers Wi-Fi 8.8.8.8 1.1.1.1
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 export PATH=/opt/homebrew/bin:$PATH
