@@ -2,6 +2,11 @@
 
 
 sudo networksetup -setdnsservers Wi-Fi 8.8.8.8 1.1.1.1
+defaults write com.apple.dock autohide -bool true && killall Dock
+defaults write com.apple.dock tilesize -int 32 && killall Dock
+defaults write com.apple.dock magnification -bool true && killall Dock
+defaults write com.apple.dock largesize -float 128 && killall Dock
+
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 export PATH=/opt/homebrew/bin:$PATH
