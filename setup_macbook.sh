@@ -6,6 +6,7 @@ defaults write com.apple.dock autohide -bool true && killall Dock
 defaults write com.apple.dock tilesize -int 32 && killall Dock
 defaults write com.apple.dock magnification -bool true && killall Dock
 defaults write com.apple.dock largesize -float 128 && killall Dock
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 2 && killall Dock
 
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
