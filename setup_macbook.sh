@@ -25,10 +25,6 @@ pipx install yt-dlp
 # Install GUI applications
 brew install --cask visual-studio-code firefox raycast drawio github docker 
 
-# if DOCKER installation fails to pull packages check the DNS on your wifi connection from your system settings,
-# set DNS to 8.8.8.8 and 1.1.1.1
-
-
 # Install Zellij
 cargo install --locked zellij
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -75,5 +71,7 @@ rm ~/miniconda3/miniconda.sh
 #   --document-url "https://web.whatsapp.com/" \
 #   "https://web.whatsapp.com/data/manifest.json" 
 
+sudo cp /etc/pam.d/sudo /etc/pam.d/sudo.backup && \
+sudo sed -i '' '1s;^;auth       sufficient     pam_tid.so\n;' /etc/pam.d/sudo
 
 exit
