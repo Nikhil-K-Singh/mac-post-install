@@ -7,6 +7,7 @@ alias Home="cd ~"
 alias docs="cd ~/Documents"
 alias downloads="cd ~/Downloads"
 alias github="cd ~/Documents/GitHub"
+alias base="source ~/miniconda3/bin/activate"
 
 alias eza="eza --color=always --long  --git --icons=always --no-user --no-permissions --tree --level=2"
 alias ytd="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'"
