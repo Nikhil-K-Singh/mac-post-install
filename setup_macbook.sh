@@ -66,5 +66,6 @@ rm ~/miniconda3/miniconda.sh
 
 sudo cp /etc/pam.d/sudo /etc/pam.d/sudo.backup && \
 sudo sed -i '' '1s;^;auth       sufficient     pam_tid.so\n;' /etc/pam.d/sudo
-
+brew install --cask nikitabobko/tap/aerospace
+defaults write -g NSWindowShouldDragOnGesture -bool true 
 exit
