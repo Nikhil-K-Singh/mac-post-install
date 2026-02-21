@@ -30,7 +30,7 @@ pipx install quickdownload
 pipx install yt-dlp
 
 # Install GUI applications
-brew install --cask visual-studio-code itsycal firefox raycast drawio github docker chatgpt
+brew install --cask visual-studio-code itsycal firefox drawio github docker chatgpt claude-code
 
 # Install Zellij
 cargo install --locked zellij
