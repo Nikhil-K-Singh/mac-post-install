@@ -26,11 +26,18 @@ brew install zsh-autosuggestions zsh-syntax-highlighting
 export PATH="$HOME/.local/bin:$PATH"
 
 # Install downloading tools
-pipx install quickdownload
+# pipx install quickdownload
 pipx install yt-dlp
 
 # Install GUI applications
-brew install --cask visual-studio-code itsycal firefox drawio github docker chatgpt claude-code
+brew install --cask visual-studio-code
+brew install --cask itsycal
+brew install --cask firefox 
+brew install --cask drawio
+brew install --cask github
+brew install --cask docker
+brew install --cask chatgpt
+brew install --cask claude-code
 
 # Install Zellij
 cargo install --locked zellij
@@ -66,6 +73,5 @@ rm ~/miniconda3/miniconda.sh
 
 sudo cp /etc/pam.d/sudo /etc/pam.d/sudo.backup && \
 sudo sed -i '' '1s;^;auth       sufficient     pam_tid.so\n;' /etc/pam.d/sudo
-brew install --cask nikitabobko/tap/aerospace
 defaults write -g NSWindowShouldDragOnGesture -bool true 
 exit
