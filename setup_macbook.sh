@@ -3,6 +3,11 @@
 
 sudo networksetup -setdnsservers Wi-Fi 1.1.1.1
 
+# Enabling fingerprint for sudo commands in session instead of password
+sudo cp /etc/pam.d/sudo /etc/pam.d/sudo.backup && \
+sudo sed -i '' '1s;^;auth       sufficient     pam_tid.so\n;' /etc/pam.d/sudo
+
+defaults write -g NSWindowShouldDragOnGesture -bool true && \
 defaults write com.apple.dock autohide -bool true && \
 defaults write com.apple.dock tilesize -int 32 && \
 defaults write com.apple.dock magnification -bool true && \
@@ -13,6 +18,7 @@ defaults write com.apple.dock persistent-apps -array && killall Dock
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 
+softwareupdate --install-rosetta --agree-to-license
 
 # Install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
@@ -71,7 +77,5 @@ curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o ~/
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm ~/miniconda3/miniconda.sh
 
-sudo cp /etc/pam.d/sudo /etc/pam.d/sudo.backup && \
-sudo sed -i '' '1s;^;auth       sufficient     pam_tid.so\n;' /etc/pam.d/sudo
-defaults write -g NSWindowShouldDragOnGesture -bool true 
+
 exit
