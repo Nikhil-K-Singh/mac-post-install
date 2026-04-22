@@ -44,6 +44,7 @@ brew install --cask github
 brew install --cask docker
 brew install --cask chatgpt
 brew install --cask claude-code
+brew install --cask whatsapp
 
 # Install Zellij
 cargo install --locked zellij
