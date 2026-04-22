@@ -1,12 +1,14 @@
 #!/usr/bin/zsh
+# SUGGESTED TO EXECUTE BELOW LINES ONE BY ONE , UNDERSTANDING WHAT EACH DOES 
 
-
+# make Google DNS service for your network, allowing low latency compared to the local ISP
 sudo networksetup -setdnsservers Wi-Fi 1.1.1.1
 
 # Enabling fingerprint for sudo commands in session instead of password
 sudo cp /etc/pam.d/sudo /etc/pam.d/sudo.backup && \
 sudo sed -i '' '1s;^;auth       sufficient     pam_tid.so\n;' /etc/pam.d/sudo
 
+# homescreen restructing with minimalist style
 defaults write -g NSWindowShouldDragOnGesture -bool true && \
 defaults write com.apple.dock autohide -bool true && \
 defaults write com.apple.dock tilesize -int 32 && \
@@ -18,6 +20,7 @@ defaults write com.apple.dock persistent-apps -array && killall Dock
 defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 
+# installing rosetta to allow setting up Virtual Machines on the device
 softwareupdate --install-rosetta --agree-to-license
 
 # Install Homebrew
@@ -27,13 +30,11 @@ export PATH=/opt/homebrew/bin:$PATH
 # Install command-line tools
 brew install pipx rust eza tree bat thefuck entr tldr vlc ffmpeg motrix ripgrep zsh pure fzf libtorrent-rasterbar
 brew install zsh-autosuggestions zsh-syntax-highlighting
-
-
 export PATH="$HOME/.local/bin:$PATH"
 
 # Install downloading tools
-# pipx install quickdownload
-pipx install yt-dlp
+# pipx install quickdownload         # I do not maintain this anymore.
+pipx install yt-dlp        # downloading youtube videos from URI
 
 # Install GUI applications
 brew install --cask visual-studio-code
@@ -50,29 +51,21 @@ brew install --cask whatsapp
 cargo install --locked zellij
 export PATH="$HOME/.cargo/bin:$PATH"
 
-# update FilePilot if already installed
+# Install FilePilot        # Caution i do not actively maintain this
 cd ~
-if [ -d "FilePilot" ]; then
-  cd FilePilot
-  git pull
-else
-  git clone https://github.com/Nikhil-K-Singh/FilePilot.git
-  cd FilePilot
-fi
+git clone https://github.com/Nikhil-K-Singh/FilePilot.git
+cd FilePilot
 cargo build --release
 cd ..
 
+# Install Scribble       # Caution i do not actively maintain this
 cd ~
-if [ -d "scribble" ]; then
-  cd scribble
-  git pull
-else
-  git clone https://github.com/Nikhil-K-Singh/scribble.git
-  cd scribble
-fi
+git clone https://github.com/Nikhil-K-Singh/scribble.git
+cd scribble
 cargo build --release
 cd ..
 
+# Install miniconda to allow for multiple python runtimes
 mkdir -p ~/miniconda3
 curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o ~/miniconda3/miniconda.sh
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
@@ -80,6 +73,5 @@ rm ~/miniconda3/miniconda.sh
 
 # if you need MS Office Suite on the mac,
 # follow https://massgrave.dev/office_for_mac
-
 
 exit
