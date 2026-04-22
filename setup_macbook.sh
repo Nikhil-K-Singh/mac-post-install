@@ -78,5 +78,8 @@ curl https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-arm64.sh -o ~/
 bash ~/miniconda3/miniconda.sh -b -u -p ~/miniconda3
 rm ~/miniconda3/miniconda.sh
 
+# if you need MS Office Suite on the mac,
+# follow https://massgrave.dev/office_for_mac
+
 
 exit
