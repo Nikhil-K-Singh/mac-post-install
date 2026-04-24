@@ -4,6 +4,13 @@
 # make Google DNS service for your network, allowing low latency compared to the local ISP
 sudo networksetup -setdnsservers Wi-Fi 1.1.1.1
 
+# setup adblock on DNS level
+# goto https://ublockdns.com
+# copy the account key gospel-turtle-clap-blood
+# setup for "All apps on this computer" 
+# curl -sSfL https://ublockdns.com/install.sh | sh -s -- UNIQUE_token
+
+
 # Enabling fingerprint for sudo commands in session instead of password
 sudo cp /etc/pam.d/sudo /etc/pam.d/sudo.backup && \
 sudo sed -i '' '1s;^;auth       sufficient     pam_tid.so\n;' /etc/pam.d/sudo
